@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const https = require('https');
-
-https.get('https://jmonterobackend.azurewebsites.net/api', (resp) => {
+router.get('https://jmonterobackend.azurewebsites.net/api', (resp) => {
   let data = '';
-
+  
   // A chunk of data has been received.
   resp.on('data', (chunk) => {
     data += chunk;
