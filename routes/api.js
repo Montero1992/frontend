@@ -4,7 +4,7 @@ var request = require('request');
 
 router.get('/', function(req, res, next) {
   request({
-    uri: 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY',
+    uri: 'https://jmonterobackend.azurewebsites.net/api',
   }).pipe(res);
 });
 
