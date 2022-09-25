@@ -3,14 +3,14 @@ var router = express.Router();
 
 router.get('https://jmonterobackend.azurewebsites.net/api', (resp) => {
   let data = '';
-  
+
   // A chunk of data has been received.
-  resp.on('data', (chunk) => {
+  router.on('data', (chunk) => {
     data += chunk;
   });
 
   // The whole response has been received. Print out the result.
-  resp.on('end', () => {
+  router.on('end', () => {
     console.log(JSON.parse(data).explanation);
   });
 
