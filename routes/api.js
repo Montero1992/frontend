@@ -4,7 +4,7 @@ var request = require('request');
 
 router.get('/', function(req, res, next) {
   request({
-    uri: 'https://jmonterobackend.azurewebsites.net/api',
+    uri: 'https://jmbackend.azurewebsites.net/api',
   }).pipe(res);
 });
 
