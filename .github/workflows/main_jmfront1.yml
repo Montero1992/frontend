@@ -47,17 +47,10 @@ jobs:
         with:
           creds: '{"clientId":"b5a6a64f-c7a0-49bc-830b-8050350be7a5","clientSecret":"2V88Q~G~qONVW0Xl3PIrHOpyH07v9Q7pdDJ3jdbn","subscriptionId":"a8a62194-3087-43e5-8b70-5723ef2c07b9","tenantId":"ce7eeb93-203f-4adb-af32-9f884e4c22f8"}'
 
-
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
           name: node-app
-
-      - name: 'Login to Azure Web App'
-        uses: Azure/login@v1
-        id: login-to-webapp
-        with:
-          creds: '{"clientId":"b5a6a64f-c7a0-49bc-830b-8050350be7a5","clientSecret":"2V88Q~G~qONVW0Xl3PIrHOpyH07v9Q7pdDJ3jdbn","subscriptionId":"a8a62194-3087-43e5-8b70-5723ef2c07b9","tenantId":"ce7eeb93-203f-4adb-af32-9f884e4c22f8"}'
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
